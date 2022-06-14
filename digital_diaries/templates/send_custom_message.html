@@ -1,0 +1,88 @@
+<html>
+
+
+<head>
+  <title> send custom message </title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <form action="{{ url_for('send_custom_message') }}" id="formCustomMessage"  method="post">
+
+    <h1> invio messaggio personalizzato </h1>
+    <p>Inserire password, testo del messaggio e destinatari </p>
+    <p>Nel caso di google form: generare link precompilato e inserire la parola code_id nel campo CODE_ID  https://docs.google.com/forms/d/e/1FAIpQLSfx8Lb4Hx312i9Rzcc-Swc3jzSfricRO6randADlkcj4o_6sA/viewform?usp=pp_url&entry.1630867571=code_id <a href="https://docs.google.com/forms/d/e/1FAIpQLSfx8Lb4Hx312i9Rzcc-Swc3jzSfricRO6randADlkcj4o_6sA/viewform?usp=pp_url&entry.1630867571=code_id">esempio</a>  </p>
+
+    <div class="form-group">
+      <label for="message">password</label>
+      <input type="password" class="form-control" rows="3" aria-label="With textarea" id="password" name="password"
+        form="formCustomMessage"></textarea>
+
+    </div>
+
+
+    <div class="form-group">
+      <label for="message">Testo del messaggio personalizzato</label>
+      <textarea class="form-control" rows="3" aria-label="With textarea" id="message" name="message"
+        form="formCustomMessage"></textarea>
+
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="0_Admin" id="Admin" value="0" checked>
+      <label class="form-check-label" for="telegram_group">
+        Admin
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="1_Teachers" id="Teachers" value="1">
+      <label class="form-check-label" for="telegram_group">
+        Teachers
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="2_IES Ferrer" id="IES Ferrer" value="2">
+      <label class="form-check-label" for="telegram_group">
+        IES Ferrer
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="3_Escola Afonso" id="Escola Afonso" value="3">
+      <label class="form-check-label" for="telegram_group">
+        Escola Afonso
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="4_ITT Marconi" id="ITT Marconi" value="4">
+      <label class="form-check-label" for="telegram_group">
+        ITT Marconi </label>
+      </label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="5_Colegiul Neculce" id="Colegiul Neculce" value="5">
+      <label class="form-check-label" for="telegram_group">
+        Colegiul Neculce
+      </label>
+    </div>
+
+
+    <button type="submit" class="btn-primary">Invia messaggio personalizzato</button>
+
+
+  </form>
+
+
+
+
+</body>
+
+
+
+</html>
